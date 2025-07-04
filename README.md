@@ -35,4 +35,11 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-calendly clone to schedule meet ups!
+MeetByte is a smart and simple scheduling tool that helps you take the hassle out of booking meetings. Whether you're coordinating with clients, teammates, or collaborators, MeetByte lets you share your availability instantly — no back-and-forth emails.
+
+⚡ Effortless Scheduling
+📆 Calendar Sync (Google, Outlook, etc.)
+🌐 Personalized Booking Links
+🔐 Privacy-First and Secure
+
+Designed for professionals, creators, and teams who value their time, MeetByte turns scheduling into a seamless experience — byte-sized, but powerful.
