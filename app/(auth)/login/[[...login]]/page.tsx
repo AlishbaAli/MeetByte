@@ -1,4 +1,5 @@
 import { SignIn } from "@clerk/nextjs";
+import { shadesOfPurple } from "@clerk/themes";
 import Image from "next/image";
 
 export default function LoginPage() {
@@ -7,7 +8,11 @@ export default function LoginPage() {
       <Image src="/assets/logo.svg" width={100} height={100} alt="Logo" />
 
       <div className="mt-3">
-        <SignIn />
+        <SignIn
+          appearance={{
+            baseTheme: shadesOfPurple,
+          }}
+        />
       </div>
     </main>
   );
