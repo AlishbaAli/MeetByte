@@ -1,8 +1,9 @@
 //import EventCard from "@/components/cards/EventCard";
+import EventCard from "@/components/cards/EventCard";
 import { Button } from "@/components/ui/button";
-//import { getEvents } from "@/server/actions/events";
+import { getEvents } from "@/server/actions/events";
 import { auth } from "@clerk/nextjs/server";
-import { CalendarPlus } from "lucide-react";
+import { CalendarPlus, CalendarRange } from "lucide-react";
 import Link from "next/link";
 
 export default async function EventsPage() {
@@ -10,7 +11,7 @@ export default async function EventsPage() {
 
   if (!userId) return redirectToSignIn();
 
-  //const events = await getEvents(userId)
+  const events = await getEvents(userId);
 
   return (
     <section className="flex flex-col items-center gap-16 animate-fade-in">
@@ -33,8 +34,7 @@ export default async function EventsPage() {
         </Button>
       </div>
 
-      {/* Show event cards if any exist, otherwise show empty state */}
-      {/* {events.length > 0 ? (
+      {events.length > 0 ? (
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-10">
           {events.map((event) => (
             <EventCard key={event.id} {...event} />
@@ -54,7 +54,7 @@ export default async function EventsPage() {
             </Link>
           </Button>
         </div>
-      )} */}
+      )}
     </section>
   );
 }
