@@ -131,3 +131,4 @@ export async function getEvent(
 
   return event ?? undefined; // Explicitly return undefined if not found
 }
+export type PublicEvent = Omit<EventRow, "isActive"> & { isActive: true };
