@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { eventFormSchema } from "@/schema/events";
 import { zodResolver } from "@hookform/resolvers/zod";

@@ -6,7 +6,7 @@
 //  ensuring only valid options are shown. Upon submission, it sends the form data along
 //  with the `eventId` and `clerkUserId` to a backend function (`createMeeting`) to create
 //  the meeting, and handles any server-side errors by displaying them in the UI.
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { createMeeting } from "@/server/actions/meetings";

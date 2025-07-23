@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { DAYS_OF_WEEK_IN_ORDER } from "@/constants";

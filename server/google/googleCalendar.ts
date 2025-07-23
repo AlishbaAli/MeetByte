@@ -1,5 +1,6 @@
 // This server-side file handles integration between a Clerk-authenticated user and their Google Calendar. It provides two main functions: one for fetching all the user's calendar events within a specified date range (`getCalendarEventTimes`), and another for creating a new calendar event (`createCalendarEvent`). It authenticates users via OAuth using Clerk, formats date values using `date-fns`, and communicates with the Google Calendar API using the `googleapis` package. The file ensures all logic runs securely on the server, marked explicitly by `'use server'`.
 // Mark this file as server-side only
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use server";
 
 import { clerkClient } from "@clerk/nextjs/server";

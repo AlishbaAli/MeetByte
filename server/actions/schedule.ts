@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // This server action handles saving a user's schedule by first validating the submitted form data using Zod and checking if the user is authenticated. If valid, it either inserts a new schedule or updates an existing one in the database, ensuring the schedule is linked to the authenticated user. It then clears any previously saved availabilities for that schedule and inserts the new ones provided by the user. All database operations are executed in a single batch to ensure consistency and efficiency.
 
 "use server";
@@ -98,6 +99,7 @@ export async function saveSchedule(
     }
 
     // Run all statements in a single transaction
+
     await db.batch(statements);
   } catch (error: any) {
     // Catch and throw an error with a readable message
